@@ -1,0 +1,201 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+import colors from "../assets/ozeo/colors.png";
+import desktopview from "../assets/ozeo/desktop-view.png";
+import font from "../assets/ozeo/font.png";
+import lighthouse from "../assets/ozeo/lighthouse.png";
+import phonedisplay from "../assets/ozeo/phone-display.png";
+import wireframe from "../assets/ozeo/wireframe.png";
+
+
+---
+
+<Layout title="Tvorba nového e-shopu pro prodejce moderního nábytku a bytových doplňků">
+  <Sectionhead>
+    <Fragment slot="title">
+      Tvorba e-shopu moderního nábytku a bytových doplňků
+    </Fragment>
+  </Sectionhead>
+
+  <Container>
+    <article class="reference-content">
+
+      <section>
+			<h2>Úvod</h2>
+			<p>Tato case study se zaměřuje na průběh realizace eshopu ozeo.cz</p>
+			<p>Má role v tomto projektu byla jako externí webdesigner a také jako front-end vývojář. Projekt probíhal ve spolupráci s agenturou <a href="https://eline.cz" rel="nofollow">eline.cz</a>, 
+				která celou zakázku zastřešovala a následně pro klienta poskytnula server a vlastí back-end řešení eshopu.</p>
+        </section>
+        
+        
+        <section>
+			<h2>Zadání projektu a cíle</h2>
+			<p>Klient požaduje vytvoření eshopového řešení se zaměřením na nábytek. Postupně má eshop v plánu rozšiřovat i o další kategorie, 
+				je nutno jej tedy nestylyzovat příliš do konkrétního vizuálního stylu (například typické motivy dřeva), protože by tom mohlo v budoucnu omezit růst.</p>
+			<ul>
+				<li>Web bude responzivní, optimalizovaný pro moderní prohlížeče a uživatelsky přívětivý</li>
+				<li>Eshop bude následně programovaný v php a běžet bude na Apache serveru</li>
+				<li>Košík bude mít 4 kroky</li>
+				<li>Produkty můžou mít různé varianty</li>
+				<li>Formuláře musí být přizpůsobeny pro validaci platební brány</li>
+			</ul>
+			<p>Vzory webů, které se klientovi líbily: ciste-drevo.cz a oveckarna.cz</p>
+			<p>Klient také původně požadoval svislý strom navigace, ovšem po pár konzultacích jsme od této možnosti opustili.</p>
+       </section>
+
+
+
+      <section>
+			<h2>UX a wireframing</h2>
+			<p>Pro primární user research nebyl na tomto projektu budget, ale jelikož jsem v minulosti pracoval na projektech s podobnou tématikou (nábytek a domácnost) tak jsem měl znalosti ohledně chování a potřebách cílové skupiny. </p>
+			<ul>
+				<li>18 - 50 let</li>
+				<li>spíš ženy</li>
+				<li>prioritní je cena a design</li>
+			</ul>		
+			<p>Vycházel jsem tedy hlavně ze zkušeností a z obecných zásad dobrého user experience.</p> 
+			<p>Návrh jsem postupně konzultoval s agenturou a také samotným klientem, aby nedošlo ke zbytečnému nedorozumění a komplikacím, které by mohly brzdit celý proces realizace.</p>
+
+      <figure>
+        <Picture
+        src={wireframe}
+        format="avif"
+        alt="Wireframe úvodní stránky"
+        widths={[400, 600, 820]}
+        sizes="(max-width: 991px) 100vw, 820px"
+        class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+        format="avif"/>
+        <figcaption>Wireframe úvodní stránky</figcaption>
+      </figure>
+
+    </section>
+
+
+<section>
+			<h2>Design a vizuální styl</h2>	
+			<p>Klient do projektu prezentoval vlastní logo, ze kterého chtěl vyvodit i zbytek vizuální identity. Kombinace bílé, tmavě šedé a zelené barvy (určené hlavně pro CTA) dodala designu elegantní a prémiový vzhled. </p>
+			<h3>Barevná paleta</h3>
+
+      <figure>
+        <Picture
+        src={colors}
+        format="avif"
+        alt="Barevná paleta"
+        widths={[400, 600, 820]}
+        sizes="(max-width: 991px) 100vw, 820px"
+        class="h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+        format="avif"/>
+
+      </figure>
+
+			<h3>Písmo</h3>	
+      <figure>
+        <Picture
+        src={font}
+        format="avif"
+        alt="Písmo"
+        widths={[400, 400, 410]}
+        sizes="(max-width: 991px) 100vw, 410px"
+        class=" h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+        format="avif"/>
+
+      </figure>
+
+
+
+			<h3>Layout</h3>	
+			<p>Jako layout jsem zvolil klasický “bootstrapovský” 12 columns layout s celkovou šířkou 1460px a 20px mezerama (na mobilu 10px). Breakpointy zvoleny 991px, 767px a 575px.</p>
+			<p>Mobilné verzi jsem designoval paralelně s desktopovou, nikoliv jako mobile-first.</p>
+
+      <figure>
+        <Picture
+        src={desktopview}
+        format="avif"
+        alt="Návrh webu pro desktop"
+        widths={[400, 400, 820]}
+        sizes="(max-width: 991px) 100vw, 820px"
+        class=" h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+        format="avif"/>
+        <figcaption>Návrh webu pro desktop</figcaption>
+      </figure>
+
+
+			<h3>Sociální sítě</h3>	
+			<p>Ve spodní části webu jsem umístil Instagram feed a odkazy na Instagram, Facebook a Youtube, protože klient se chtěl zaměřit na propagaci značky na sociálních sítích.</p>
+
+			<h2>Front-end vývoj</h2>
+			<h3>Workflow a technologie</h3>
+			<p>Původně jsem chtěl psát šablony v něčem jako je Astro, ale raději jsem zvolil osvědčený nástroj, který je pro psaní rozsáhlejších webů skvělý a nic nekomlikuje - Pug.</p>
+			<p>V kombinaci se Sassem, postcss, browsersync jsem to kompiloval gulpem do html šablon.</p>
+			
+			<h3>Javascript</h3>
+			<p>Na projektu jsem se rozhodl nepoužívat jquery ani žádné další “velké” js pluginy třetích stran, které by mohly negativně ovlivnit rychlost webu (největší plugin, který je určený pro touch carousel, má 13 kB). </p>
+			
+			<h3>Styly</h3>
+			<p>Poprvé na větším projektu jsem také osekal bootstrap pouze na reset a grid a celkový css je tak něco kolem 13 kB (70 kB). Na pojmenování prvků stránky jsem použil BEM</p>
+			
+			<h3>Další</h3>
+			<p>Version control přes github.</p>
+			<p>Testovací distribuční verzi šablony jsem napojil na Cloudflare Pages</p>
+			
+			<h3>Rychlost a optimalizace</h3>
+			<p>Šablona má nasazený servise worker od upup.js a je tak plně instalovatelná PWA.</p>
+			
+			<p>Mezi další techniky optimalizace patřily také: Lazyloading, webp, content-visibility, passive-listeners, preload fonts, instant.page plugin.</p>
+			
+			<p>Tím se mi podařilo dosáhnout slušného skóre v lighthouse</p>
+
+      <figure>
+        <Picture
+        src={lighthouse}
+        format="avif"
+        alt="lighthouse"
+        widths={[400, 400, 520]}
+        sizes="(max-width: 991px) 100vw, 520px"
+        class=" h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+        format="avif"/>
+      </figure>
+
+    </section>
+
+
+
+  <section>
+			<h2>Mobilní zobrazení</h2>	
+			<p>Z mobilu chodí až 70% návštěvníků webu, takže zaměřit se na přehledné zobrazení a intuitivní ovládání bylo prioritní.</p> 
+
+			<p>Mezi důležité prvky patří:</p>
+			<ul>
+				<li>off-canvasové menu produktů a filtr</li>
+				<li>swipe ovládání produktových fotek a úvodního slideru</li>
+				<li>ukotvená horní lišta</li>
+			</ul>
+
+      <figure>
+        <Picture
+        src={phonedisplay}
+        format="avif"
+        alt="Mobilní zobrazení"
+        widths={[400, 400, 820]}
+        sizes="(max-width: 991px) 100vw, 820px"
+        class=" h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+        format="avif"/>
+        <figcaption>Mobilní zobrazení</figcaption>
+      </figure>
+
+
+
+			<h2>Výsledek</h2>	
+			<p>Během následného vývoje a nasazování na backend jsem aktivně dohlížel, aby bylo vše v pořádku a konzultoval, vysvětloval a popřípadě opravoval jednotlivé funkce.</p> 
+			<p>Po několika mšsích byla spuště na také slovesnká verze e-shopu <a href="https://ozeo.sk" rel="nofollow">ozeo.sk</a>, kde jsem upravoval design několika prvků a také funkce pro přepočet cen na Euro</p>
+        
+    </section>
+
+    </article>
+  </Container>
+</Layout>

@@ -1,0 +1,354 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Picture } from "@astrojs/image/components";
+import Cta from "@components/cta.astro";
+
+import img404 from "../assets/shoptet/404.png";
+import admin from "../assets/shoptet/admin.png";
+import carousel from "../assets/shoptet/carousel.png";
+import categories from "../assets/shoptet/categories.png";
+import contact from "../assets/shoptet/contact.png";
+import cookiebar from "../assets/shoptet/cookiebar.png";
+import empty from "../assets/shoptet/empty.png";
+import faq from "../assets/shoptet/faq.png";
+import floatingbar from "../assets/shoptet/floatingbar.png";
+import ig from "../assets/shoptet/ig.png";
+import imgtosvg from "../assets/shoptet/img-to-svg.png";
+import inputs from "../assets/shoptet/inputs.png";
+import linkurl from "../assets/shoptet/link-url.png";
+import loginbanner from "../assets/shoptet/login-banner.png";
+import login from "../assets/shoptet/login.png";
+import logos from "../assets/shoptet/logos.png";
+import message from "../assets/shoptet/message.png";
+import modal from "../assets/shoptet/modal.png";
+import nav from "../assets/shoptet/nav.png";
+import newsletter from "../assets/shoptet/newsletter.png";
+import offline from "../assets/shoptet/offline.png";
+import pagination from "../assets/shoptet/pagination.png";
+import search from "../assets/shoptet/search.png";
+import step4 from "../assets/shoptet/step4.png";
+import userrating from "../assets/shoptet/user-rating.png";
+import voice from "../assets/shoptet/voice.png";
+
+
+const shlist = [
+  {
+    name: "Odkazování na variantu produktu přes URL",
+    text: "Umožní Vám ve vašich marketingových kampaních odkazovat na konkrétní variantu produktu. Funguje pro kombinované varianty.",
+    thumb: {
+      src: linkurl,
+    },
+  },
+
+  {
+    name: "Rozšířená objednávka - modální okno mezikošíku",
+    text: "Automaticky se doplní také související produkty. Není nutné mít aktivovaný placený doplněk Rozšířená objednávka.",
+    thumb: {
+      src: modal,
+    },
+  },
+
+  {
+    name: "Úvodní carousel má text a tlačítko",
+    text: "Text u banneru se automaticky doplní z pole Název banneru, který vyplňujete v administraci.",
+    thumb: {
+      src: carousel,
+    },
+  },
+
+  {
+    name: "Výpis značek na úvodní straně",
+    text: "Výpis libovolného počtu značek dle vašeho výběru v carouselu.",
+    thumb: {
+      src: logos,
+    },
+  },
+
+  {
+    name: "Grafická úprava inputů v košíku",
+    text: "",
+    thumb: {
+      src: inputs,
+    },
+  },
+
+  {
+    name: "Login formulář v modalním okně",
+    text: "Při klliknutí na ikonu uživtele v záhlaví zobrazí login formulář ve vyskakovacím modal okně.",
+    thumb: {
+      src: login,
+    },
+  },
+
+  {
+    name: "Efektivnější 404 stránka",
+    text: "Grafická úprava 404 stránky a přídání rozcestníku kategorií či produktů pro zvýšení konverzí.",
+    thumb: {
+      src: img404,
+    },
+  },
+
+  {
+    name: "Efektivnější stránka prázdného košíku",
+    text: "Grafická úprava prázdného košíku a přídání rozcestníku kategorií či produktů pro zvýšení konverzí.",
+    thumb: {
+      src: empty,
+    },
+  },
+
+  {
+    name: "Grafická úprava cookies lišty",
+    text: "Přizpůsobení cookies lišty pro desktop i mobilní zobrazení.",
+    thumb: {
+      src: cookiebar,
+    },
+  },
+
+  {
+    name: "Hodnocení zákazníků na homepage v carouselu",
+    text: "Vypsání posledních 10 hodnocení do carouselu, který se bude zobrazovat na homepage.",
+    thumb: {
+      src: userrating,
+    },
+  },
+
+  {
+    name: "Stránka nejčastěji pokládané otázky",
+    text: "Vytvoření stránky 'Nejčastěji pokládané otázky (FAQ)' a následné grafické zpracování v moderním stylu.",
+    thumb: {
+      src: faq,
+    },
+  },
+
+  {
+    name: "Newsletter sekce v zápatí",
+    text: "Umístění a grafická úprava newsletter sekce do zápatí.",
+    thumb: {
+      src: newsletter,
+    },
+  },
+
+  {
+    name: "Sociální sítě sekce v zápatí",
+    text: "Umístění a grafická úprava instagram feedu a odkazů na sociální média do zápatí.",
+    thumb: {
+      src: ig,
+    },
+  },
+
+  {
+    name: "Grafická úprava login sekce v druhém kroku košíku",
+    text: "Designové zpracování login banneru s možností úpravy nebo přidání dalšího obsahu.",
+    thumb: {
+      src: loginbanner,
+    },
+  },
+  
+  {
+    name: "Grafická úprava oznámení",
+    text: "Grafická úprava oznámení napříc celým webem do jednotného a moderního stylu.",
+    thumb: {
+      src: message,
+    },
+  },
+  
+  {
+    name: "Změna stránkování",
+    text: "Předělání stránkování na uživatelsky přívětivější formát.",
+    thumb: {
+      src: pagination,
+    },
+  },
+  
+  {
+    name: "Výpis vybraných kategorií na homepage",
+    text: "Zobrazte kategorie dle vlastního výběru na úvodní straně e-shopu. Možné i jako carousel.",
+    thumb: {
+      src: categories,
+    },
+  },
+  
+  {
+    name: "Úprava kontaktního formuláře a přídání vlastních polí",
+    text: "Výměna výchozího kontaktního formuláře za vlastní řešení s pokročilými funkcemi.",
+    thumb: {
+      src: contact,
+    },
+  },
+  
+  {
+    name: "Zobrazení posledního kroku košíku",
+    text: "Přidání 4. kroku do záhlaví košíku označeného 'Dokončení objednávky'",
+    thumb: {
+      src: step4,
+    },
+  },
+  
+  {
+    name: "Výměna ikon na svg",
+    text: "Vyměním rastrové ikony a výchozí shoptet ikony za vektorové svg",
+    thumb: {
+      src: imgtosvg,
+    },
+  },
+  
+  {
+    name: "Skrytí admin lišty",
+    text: "Úprava skryje admin lištu v záhlaví s možností rozblení pomocí ikonky pravém horním rohu",
+    thumb: {
+      src: admin,
+    },
+  },
+  
+  {
+    name: "Přidání offline stránky",
+    text: "Zobrazte pro návštěvníky vlastní personalizovanou zprávu v případě výpadku internetu. Můžete je tak třeba odkázat na svou zákaznickou linku. V mnoha případech tak nepřijdete o zákazníka.",
+    thumb: {
+      src: offline,
+    },
+  },
+  
+  {
+    name: "Plovoucí lišta přidat do košíku",
+    text: "Návštěvník na mobilu nemusí scrollovat zpět nahoru pro přídání produktu do košíku, CTA tlačítko je vždy viditelné.",
+    thumb: {
+      src: floatingbar,
+    },
+  },
+  
+  {
+    name: "Plovoucí lišta vyhledávání",
+    text: "Defaultně zobrazené vyhledávání se skryje až po scrollování dolů a nahradí jej klasická ikona v horní liště.",
+    thumb: {
+      src: search,
+    },
+  },
+  
+  {
+    name: "Hlasové vyhledávání",
+    text: "Umožněte svým zákazníkům vyhledávat na svém e-shopu pomocí hlasu. Tato funkce je podporována jen na některých zařízeních.",
+    thumb: {
+      src: voice,
+    },
+  },
+
+  {
+    name: "Redesign menu",
+    text: "Kompleteně přepracované mobilní menu dle vašich představ.",
+    thumb: {
+      src: nav,
+    },
+  },
+
+];
+
+
+const shlist2 = [
+  {
+    name: "Lepší hodnocení na PageSpeed Insights",
+    text: "Umožní vašim návštěvníkům nainstalovat váš e-shop na svoje zařízení.",
+  },
+  {
+    name: "Progresivní webová aplikace",
+    text: "Umožní vašim návštěvníkům nainstalovat váš e-shop na svoje zařízení.",
+  },
+  {
+    name: "Optimalizace obrázků",
+    text: "Komprese, Lazyloading obrázků a převod na modernější formáty webp a avif.",
+  },
+  {
+    name: "Vyladěný úvodní carousel",
+    text: "Carousel podporující lazyload obrázků a ovládání dotykem na mobilních zařízeních.",
+  },
+  {
+    name: "Lepší a rychlejší instagram widget",
+    text: "Nahrazení shoptet doplňku za rychlejší a datově úspornější variantu. Plus neplatíte žádné měsíční poplatky.",
+  },
+  {
+    name: "Přednačítání dalších stránek",
+    text: "Zkracuje dobu čekání na načtění další stránky až o 300ms.",
+  },
+  {
+    name: "Optimalizace fontů",
+    text: "Rychlejší načítání fontů, použití variabilních fontů, odstranění google fontů blokujících vykreslení.",
+  },
+  {
+    name: "Eliminace externích zdrojů",
+    text: "Analýza a přesun zdrojů načítaných z jiných originů než je Váš web.",
+  },
+  {
+    name: "Ochrana proti DDOS a firewall",
+    text: "Mějte přehled v reálném čase ohledně možných útoků DDOS a nebo blokujte celým regionům či zemím přístup na váš web.",
+  },
+  {
+    name: "Zabezpečení přístupu na login stránku",
+    text: "Zabrání přístup na login stránku bez splnění captcha výzvy.",
+  },
+  {
+    name: "Rychlejší načítání aktualit na homepage",
+    text: "Až 10x rychlejší způsob načtení aktualit.",
+  },
+  {
+    name: "Brotli, HTTP/3 a další...",
+    text: "Rychlejší načítání fontů, použití variabilních fontů.",
+  },
+];
+
+---
+<Layout title="Tvořím a optimalizuji e-shopy na platformě Shoptet">
+
+  <Sectionhead>
+    <Fragment slot="title">Tvořím a optimalizuji e-shopy na platformě Shoptet</Fragment>
+  </Sectionhead>
+
+  <main class="bg-gray-100">
+    <Container>
+
+      <article class="flex flex-col py-14 md:py-24">
+        <h1 class="text-2xl font-bold text-center md:text-4xl">Individuální úpravy e-shopu</h1>
+        <div class="grid grid-cols-1 gap-6 py-12 md:grid-cols-2 xl:grid-cols-3">
+          {
+            shlist.map((item) => (
+            <div class="p-2 bg-white rounded">
+                <div class="w-full rounded">
+                  <Picture
+                    {...item.thumb}
+                    format="avif"
+                    alt={item.name}
+                    widths={[200, 400, 430]}
+                    aspectRatio="4:2"
+                    sizes="(max-width: 430px) 100vw, 800px"
+                    class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                    format="avif"
+                  />
+                </div>
+                
+                <h3 class="text-lg font-medium pb-3 pt-5 px-4 md:text-xl">{item.name}</h3>
+                <p class="text-sm text-gray-500 px-4 pb-4 md:text-base">{item.text}</p>
+    
+              </div>
+            ))
+          }
+        </div>
+      </article>
+
+      <article class="flex flex-col py-20 border-t-2">
+        <h1 class="text-2xl font-bold text-center md:text-4xl">Zrychlím váš e-shop až o 30%</h1>
+        <div class="grid grid-cols-1 gap-6 py-12 md:grid-cols-2 xl:grid-cols-3">
+          {
+            shlist2.map((item) => (
+            <div class="p-2 bg-white rounded">
+                <h3 class="text-xl font-medium pb-3 pt-5 px-4">{item.name}</h3>
+                <p class="text-base text-gray-500 px-4 pb-4">{item.text}</p>
+              </div>
+            ))
+          }
+        </div>
+      </article>
+
+    </Container>
+  </main>
+  <Cta />
+</Layout>

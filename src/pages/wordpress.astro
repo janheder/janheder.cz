@@ -1,0 +1,95 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+import gast from "../assets/wp-gast-thumb.png";
+import infraredsun from "../assets/wp-infraredsun-thumb.png";
+import krategus from "../assets/wp-krategus-thumb.png";
+import loutkodila from "../assets/wp-loutkodilna-thumb.png";
+import ondras from "../assets/wp-ondras-thumb.png";
+import tempero from "../assets/wp-tempero-thumb.png";
+
+const wplist = [
+  {
+    name: "Gast vytápění",
+    url: "https://gast-vytapeni.cz",
+    thumb: {
+      src: gast,
+    },
+  },
+  {
+    name: "Infraredsun",
+    url: "https://infraredsun.cz",
+    thumb: {
+      src: infraredsun,
+    },
+  },
+  {
+    name: "Krategus",
+    url: "https://krategus.cz",
+    thumb: {
+      src: krategus,
+    },
+  },
+  {
+    name: "Loutkodílna",
+    url: "https://loutkodilna.cz",
+    thumb: {
+      src: loutkodila,
+    },
+  },
+  {
+    name: "Ondráš",
+    url: "https://ondras.cz",
+    thumb: {
+      src: ondras,
+    },
+  },
+  {
+    name: "Tempero",
+    url: "https://tempero.cz",
+    thumb: {
+      src: tempero,
+    },
+  },
+];
+
+---
+
+<Layout title="Tvořím prezentační weby na Wordpressu pro malé a střední firmy">
+  <Sectionhead>
+    <Fragment slot="title">
+      Tvořím prezentační weby na Wordpressu<br /> pro malé a střední firmy
+    </Fragment>
+  </Sectionhead>
+
+  <Container>
+    <div class="grid grid-cols-1 gap-8 py-12 md:py-20 md:grid-cols-2 md:gap-12">
+      {
+        wplist.map((item) => (
+        <a class="" href={item.url}>
+            <div class="w-full">
+              <Picture
+                {...item.thumb}
+                format="avif"
+                alt={item.name}
+                widths={[200, 400, 690]}
+                aspectRatio="4:3"
+                sizes="(max-width: 690px) 100vw, 800px"
+                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                format="avif"
+              />
+            </div>
+
+
+          </a>
+        ))
+      }
+
+        
+    </div>
+  </Container>
+</Layout>

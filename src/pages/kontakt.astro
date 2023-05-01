@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+---
+
+<Layout title="Kontakt">
+
+  <Sectionhead>
+    <Fragment slot="title">Kontakty</Fragment>
+  </Sectionhead>
+
+  <Container>
+    <div class="flex py-20 mx-auto max-w-2xl">
+      <Contactform />
+    </div>
+  </Container>
+</Layout>

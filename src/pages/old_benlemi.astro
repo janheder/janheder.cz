@@ -1,0 +1,99 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+import ozeo from "../assets/ozeo/wireframe.png";
+
+
+
+---
+
+<Layout title="Wordpress">
+  <Sectionhead>
+    <Fragment slot="title">
+      Tvorba e-shopu moderního nábytku a bytových doplňků
+    </Fragment>
+  </Sectionhead>
+
+  <Container>
+    <article class="reference-content">
+		<a href="https://benlemi.cz" class="reference-linktoweb">Navštívit stránku</a>
+		<section>
+		<h2>Úvod</h2>
+
+		<p>V průběhu 6 měsíců jsem spolupracoval na kompletním redesignu eshopu postaveném na Shoptetu.</p>
+		</section>
+
+		<section>
+		<h2>Proč</h2>
+		<p>Za dobu své existence eshop prošel pod rukama několika lidí, a jednotlivé individuální kódy se stávaly naprosto nepřehledné a to znamenalo řešení nepředvídatelných bugů, které zabraly velké množství času. 
+			Eshop byl úspěšný a prodával, ale v rámci budoucího růstu nebyl stav optimální. 
+			Web byl kvůli počtu úprav stále pomalejší a hlavně na mobilu, kde traffic tvořil už něco přes 60%, bylo tak potřeba výrazně zrychlit.</p>
+		</section>
+		<section>
+		<h2>Jak</h2>
+		<p>Spolu s marketinovým týmem jsem spolupracoval in-house na redesignu původního webu - to znamenalo přechod z původní upravené classic šablony na vlastní blank šablonu, kterou v té době shoptet nabízel.</p>
+		
+		<h3>Vícejazyčnost</h3>
+		<p>E-shop měl v té době 3 jazykové mutace, a mnimálně další 2 byly v plánu. Web se tedy musel udělat tak, aby byl funkční nejenom v češtině, ale také třeba v rumunštině. 
+			Z tohoto důvodu jsem společně s desigovým týmem vytvořil jednotný vizuální styl a každý web pak měl své vlastní specifické vlastnosti implementován zvlášť.</p>
+		
+		<h3>Styly</h3>
+		<p>Původní shopteťácké styly pro šablonu classic (kterou jsme použili) jsou psané v LESSu a kompilují se s bootstrapem 3.x pomocí webpacku. Jsou tam i další věci, které nejsou v nešní moderní době úplně ideální - načítání icon fontů atd.</p>
+		<p>Vytvořil jsem si vlastní scss strukturu, kompiloval to gulpem a z bootstrap 4.x jsem vytáhl pouze reset a grid.</p>
+		
+		<h3>Javascript</h3>
+		<p>samotná core.js od shoptetu funguje dobře, takže ten zůstal, navázal jsem na to svými vlastními javascripty a doplnil funkce, které naším zákazníkům zpříjemní průchod webem a zlepší nákupní proces.</p>
+		
+		<h3>Obrázky, ikony a fonty</h3>
+		<p>Téměř všechy obrázky prochází kompresí a lazyloadem, což snižuje zátěž na server a zrychluje celkové načítání webu. Cloudflare pak podle potřeby servíruje formáty WebP. A taky se to všechno cachuje.</p>
+		<p>Původní ikonový font jsem odstranil a používám svg ikony, je to rychlejší a lépe se s tím pracuje.</p>
+		
+		<h3>Responzivita</h3>
+		<p>Responzivní web je dnes samozřejmostí - vlastně spíše už prioritou. Nejsem zastánce "mobile first" přístupu (často to vede k "opomenutí" desktopové verze a vynechání důležitých prvků - třeba ":hover" a "cursor:").
+			V našem případě tvořil 70% podíl návštěvnosti mobilní zařízení, takže bylo potřeba se zaměřit na přehledné a pohodlné ovládaní. Kompletně se přepracovalo vlastně úplně všechno, od menu kategorií, filtry až po košík…</p>
+		
+		<h3>Cloudflare</h3>
+		<p>Na webu nám běží scripty od facebook, google, heureka, smartsupp a hotjar. To je slušné zatížení javascriptem třetích stran (a to se dá optimalizovat jen v omezené míře). Takže jsme nasadili řešení Cloudflare Pro. 
+			Dosáhli jsme zrychlení o 30% (1.5s) na produktovce, máme také mnohem lepší přehled o bezpečnosti, můžeme využívat service workery, cdn a také firewall.</p>
+		
+		<h3>PWA</h3>
+		<p>Troufám si říct, že jsme jako jeden z prvních (možná úplně první) shopů na shoptetu, který funguje jako progressive web app. Použil jsem knihovnu upup.js a upup.sw.js service worker. Web nám tak funguje i offline a je z něj plnohodnotný instalovatelný PWA.</p>
+		
+</section>
+<section>
+		<h2>Cíle</h2>
+		<ul>
+			<li>sjednocení vizuální identity celé značky</li>
+			<li>rychlejší načítání desktop a mobil</li>
+			<li>upsell a vyšší konverzní poměr</li>
+			<li>přehlednější a modernější prostředí</li>
+			<li>připravené na vícejazyčnou expanzi (v té době 5 jazyků)</li>
+		</ul>
+		</section>
+		<section>
+		<h2>Výsledek</h2>
+		<p>Na web nám začalo chodit výrazně více lidí z mobilu a také na něm dokončovat objednávku, což byl před redesignem problém, protože web byl dost nepřehledný a pomalý.</p>
+
+		<h3>Rychlost načítání a optimalizace</h3>
+		<p>všechny custom úpravy přes javascript na původním webu měly dopad na výkon a načítání.</p>
+		<p> Web je signifikantně rychlejší než původní verze eshopu, a v Lighthouse jsem se chtěl pohybovat nad 80 body na produktovce.</p>
+		<p>lighthouse výsledky před redesignem webu lighthouse výsledky po redesignu</p>
+
+
+		<h3>Rychlost načítání a optimalizace</h3>
+		<p>všechny custom úpravy přes javascript na původním webu měly dopad na výkon a načítání.</p>
+		<p> Web je signifikantně rychlejší než původní verze eshopu, a v Lighthouse jsem se chtěl pohybovat nad 80 body na produktovce.</p>
+		<p>lighthouse výsledky před redesignem webu lighthouse výsledky po redesignu</p>
+</section>
+<section>
+		<h2>Redesign 2022</h2>
+		<p>Předělaný vizuální styl, modernizace kódu, promazání legacy fukncí a stylů.</p>
+
+</section>
+    </article>
+  </Container>
+</Layout>

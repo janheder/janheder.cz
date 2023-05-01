@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Cerebri Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/CerebriSans-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Cerebri Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/CerebriSans-Medium.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Cerebri Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/CerebriSans-SemiBold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Cerebri Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/CerebriSans-Bold.woff2') format('woff2');
+  }
+}
+
+
+.btn{
+  height: 50px;
+  border-radius: 4px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
+.btn:hover{
+  background-color: #262626;
+}
+
+
+.reference-content{
+    max-width: 100%;
+    width: 820px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.reference-content .reference-linktoweb{
+    margin-bottom: 60px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EFF6F3;
+}
+
+.reference-content section{
+    padding-bottom: 60px;
+}
+.reference-content h2{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+.reference-content h3{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.8;
+    padding: 20px 0;
+}
+.reference-content p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 15px;
+}
+.reference-content ul{
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.reference-content li{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 2;
+}
+.reference-content figure{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.reference-content figcaption{
+    opacity: 0.8;
+    font-size: 14px;
+}
+@media screen and (max-width: 991px){
+
+}
+
+
+.shopify{
+  background: #f5f5f5;
+  padding: 80px 0 0 0;
+}
+.shopify span{
+
+}
+.shopify h2{
+  font-size: 30px;
+  font-weight: 700;
+}
+.shopify p{
+  margin: 40px 0;
+  padding: 0;
+  max-width: 600px;
+}
+
+.shopify-btns{
+  display: flex;
+  gap: 15px;
+  padding-bottom: 80px;
+}
+@media screen and (max-width: 991px){
+  .shopify-btns{
+    padding-bottom: 40px;
+  }
+}
