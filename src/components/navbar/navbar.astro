@@ -2,9 +2,8 @@
 import { Picture } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
-import Dropdown from "./dropdown.astro";
 import navLogo from "assets/logo.svg";
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Astronav, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
@@ -25,9 +24,47 @@ const menuitems = [
   },
 ];
 ---
+<script>
+const el = document.querySelector('#menuToggle');
+const body = document.querySelector('body');
+
+el.addEventListener("click", ()=>{
+  body.classList.toggle('--activeMenu');
+});
 
 
-<header class="flex flex-col lg:flex-row justify-between items-center py-5 absolute w-full z-10">
+</script>
+
+<style>
+#menuToggle{
+  display: none;
+}
+@media (max-width: 1023px) {
+  #menuToggle{
+    display: flex;
+  }
+  #menuMain{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: 0.3s ease transform;
+    background-color: black;
+    width: calc(100% - 52px);
+    max-width: 400px;
+    bottom: 0;
+    height: 100%;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,.05);
+  }
+  body.--activeMenu #menuMain{
+    transform: translateX(0%);
+  }
+}
+
+
+</style>
+
+<header class="flex flex-col lg:flex-row justify-between items-center py-5 px-2 absolute w-full z-10 md:px-0">
   <Container>
     <div class="flex flex-col lg:flex-row justify-between items-center">
       <Astronav>
@@ -35,28 +72,28 @@ const menuitems = [
           <a href="/" class="w-9">
             <img src={navLogo} alt="Jan Heder">
           </a>
-          <div class="block lg:hidden">
+          <div id="menuToggle">
             <MenuIcon class="w-7 h-7 text-white" />
           </div>
         </div>
-        <MenuItems class="hidden w-full lg:w-auto lg:flex lg:mt-0">
-          <ul class="flex flex-col bg-black mt-3 text-lg md:mt-0 md:bg-transparent lg:flex-row lg:gap-3">
+        <nav id="menuMain" class="w-full lg:w-auto lg:flex lg:mt-0">
+          <ul class="flex flex-col mt-3 text-lg md:mt-0 md:bg-transparent lg:flex-row lg:gap-3">
             {
               menuitems.map((item, index) => (
                 <>
                   <li>
                     <a
                       href={item.path}
-                      class="flex p-3 text-white text-base border-1 border-white opacity-80 lg:px-3 hover:text-white hover:opacity-100">
+                      class="flex p-3 text-white text-base border-1 border-white opacity-80 text-center justify-center md:text-left lg:px-3 hover:text-white hover:opacity-100">
                       {item.title}
                     </a>
                   </li>
                 </>
               ))
             }
-            <li><a href="/kontakt" class="flex p-3 text-white text-base border-1 border-white opacity-80 lg:px-3 hover:text-white hover:opacity-100">Kontakt</a></li>
+            <li><a href="/kontakt" class="flex p-3 text-white text-base border-1 border-white opacity-80 text-center justify-center lg:px-3 hover:text-white hover:opacity-100">Kontakt</a></li>
           </ul>
-        </MenuItems>
+        </nav>
       </Astronav>
     </div>
   </Container>

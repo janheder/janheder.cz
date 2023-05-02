@@ -37,20 +37,24 @@
 
 
 
-  <link rel="stylesheet" href="/assets/1-shoptet-cart-button.8acdb6c5.css" /><script type="module">document.addEventListener("DOMContentLoaded",function(){document.getElementById("astronav-menu").addEventListener("click",()=>{[...document.querySelectorAll(".astronav-toggle")].forEach(e=>{e.classList.toggle("hidden")})});const o=document.querySelectorAll(".astronav-dropdown");o.forEach(e=>{const r=e.querySelector("button");r.addEventListener("click",n=>{e.classList.toggle("open"),e.setAttribute("aria-expanded",e.getAttribute("aria-expanded")==="true"?"false":"true"),e.hasAttribute("open")?e.removeAttribute("open"):e.setAttribute("open",""),r.nextElementSibling.classList.toggle("hidden"),Array.from(o).filter(t=>t!==e).forEach(t=>{t.classList.remove("open"),t.removeAttribute("open"),t.setAttribute("aria-expanded","false"),t.querySelector(".dropdown-toggle").classList.add("hidden")}),n.stopPropagation()})}),document.addEventListener("click",()=>{o.forEach(e=>{e.classList.remove("open"),e.removeAttribute("open"),e.setAttribute("aria-expanded","false")}),document.querySelectorAll(".dropdown-toggle").forEach(e=>e.classList.add("hidden"))})});
+  <link rel="stylesheet" href="/assets/1-shoptet-cart-button.efd34ee0.css" /><script type="module">const s=document.querySelector("#menuToggle"),a=document.querySelector("body");s.addEventListener("click",()=>{a.classList.toggle("--activeMenu")});document.addEventListener("DOMContentLoaded",function(){document.getElementById("astronav-menu").addEventListener("click",()=>{[...document.querySelectorAll(".astronav-toggle")].forEach(e=>{e.classList.toggle("hidden")})});const o=document.querySelectorAll(".astronav-dropdown");o.forEach(e=>{const n=e.querySelector("button");n.addEventListener("click",r=>{e.classList.toggle("open"),e.setAttribute("aria-expanded",e.getAttribute("aria-expanded")==="true"?"false":"true"),e.hasAttribute("open")?e.removeAttribute("open"):e.setAttribute("open",""),n.nextElementSibling.classList.toggle("hidden"),Array.from(o).filter(t=>t!==e).forEach(t=>{t.classList.remove("open"),t.removeAttribute("open"),t.setAttribute("aria-expanded","false"),t.querySelector(".dropdown-toggle").classList.add("hidden")}),r.stopPropagation()})}),document.addEventListener("click",()=>{o.forEach(e=>{e.classList.remove("open"),e.removeAttribute("open"),e.setAttribute("aria-expanded","false")}),document.querySelectorAll(".dropdown-toggle").forEach(e=>e.classList.add("hidden"))})});
 </script></head>
   <body>
-    <header class="flex flex-col lg:flex-row justify-between items-center py-5 absolute w-full z-10">
-  <div class="container mx-auto m-auto w-full">
-  <div class="flex flex-col lg:flex-row justify-between items-center">
-      <div class="flex w-full lg:w-auto items-center justify-between">
-          <a href="/" class="w-9">
-            <img src="/assets/logo.977ea047.svg" alt="Jan Heder">
+    
+
+
+
+<header class="flex flex-col lg:flex-row justify-between items-center py-5 px-2 absolute w-full z-10 md:px-0 astro-3JFRI7F6">
+  <div class="container mx-auto m-auto w-full astro-3JFRI7F6">
+  <div class="flex flex-col lg:flex-row justify-between items-center astro-3JFRI7F6">
+      <div class="flex w-full lg:w-auto items-center justify-between astro-3JFRI7F6">
+          <a href="/" class="w-9 astro-3JFRI7F6">
+            <img src="/assets/logo.977ea047.svg" alt="Jan Heder" class="astro-3JFRI7F6">
           </a>
-          <div class="block lg:hidden">
+          <div id="menuToggle" class="astro-3JFRI7F6">
             <button id="astronav-menu">
   
-    <svg fill="currentColor" class="w-7 h-7 text-white" width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <svg fill="currentColor" class="w-7 h-7 text-white astro-3JFRI7F6" width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <title>Menu</title>
       <path class="astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path>
       <path class="astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path>
@@ -58,28 +62,28 @@
   
 </button>
           </div>
-        </div><nav class="astronav-toggle hidden w-full lg:w-auto lg:flex lg:mt-0">
-    <ul class="flex flex-col bg-black mt-3 text-lg md:mt-0 md:bg-transparent lg:flex-row lg:gap-3">
-            <li>
-                    <a href="/" class="flex p-3 text-white text-base border-1 border-white opacity-80 lg:px-3 hover:text-white hover:opacity-100">
+        </div><nav id="menuMain" class="w-full lg:w-auto lg:flex lg:mt-0 astro-3JFRI7F6">
+          <ul class="flex flex-col mt-3 text-lg md:mt-0 md:bg-transparent lg:flex-row lg:gap-3 astro-3JFRI7F6">
+            <li class="astro-3JFRI7F6">
+                    <a href="/" class="flex p-3 text-white text-base border-1 border-white opacity-80 text-center justify-center md:text-left lg:px-3 hover:text-white hover:opacity-100 astro-3JFRI7F6">
                       Portfolio
                     </a>
-                  </li><li>
-                    <a href="/shoptet" class="flex p-3 text-white text-base border-1 border-white opacity-80 lg:px-3 hover:text-white hover:opacity-100">
+                  </li><li class="astro-3JFRI7F6">
+                    <a href="/shoptet" class="flex p-3 text-white text-base border-1 border-white opacity-80 text-center justify-center md:text-left lg:px-3 hover:text-white hover:opacity-100 astro-3JFRI7F6">
                       Shoptet
                     </a>
-                  </li><li>
-                    <a href="/wordpress" class="flex p-3 text-white text-base border-1 border-white opacity-80 lg:px-3 hover:text-white hover:opacity-100">
+                  </li><li class="astro-3JFRI7F6">
+                    <a href="/wordpress" class="flex p-3 text-white text-base border-1 border-white opacity-80 text-center justify-center md:text-left lg:px-3 hover:text-white hover:opacity-100 astro-3JFRI7F6">
                       Wordpress
                     </a>
-                  </li><li>
-                    <a href="/blog" class="flex p-3 text-white text-base border-1 border-white opacity-80 lg:px-3 hover:text-white hover:opacity-100">
+                  </li><li class="astro-3JFRI7F6">
+                    <a href="/blog" class="flex p-3 text-white text-base border-1 border-white opacity-80 text-center justify-center md:text-left lg:px-3 hover:text-white hover:opacity-100 astro-3JFRI7F6">
                       Blog
                     </a>
                   </li>
-            <li><a href="/kontakt" class="flex p-3 text-white text-base border-1 border-white opacity-80 lg:px-3 hover:text-white hover:opacity-100">Kontakt</a></li>
+            <li class="astro-3JFRI7F6"><a href="/kontakt" class="flex p-3 text-white text-base border-1 border-white opacity-80 text-center justify-center lg:px-3 hover:text-white hover:opacity-100 astro-3JFRI7F6">Kontakt</a></li>
           </ul>
-</nav>
+        </nav>
 
 
 
