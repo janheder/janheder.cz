@@ -2,7 +2,7 @@
 title: "[1] Shoptet úpravy - Změna textace tlačítka objednat v košíku"
 excerpt: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 publishDate: "2023-01-21T11:39:36.050Z"
-image: "../assets/blog/thumb-sh-1.png"
+image: "https://github.com/janheder/janheder.cz/blob/main/src/assets/blog/thumb-sh-1.png?raw=true"
 author: "Jan Heder"
 layout: "@layouts/BlogLayout.astro"
 ---

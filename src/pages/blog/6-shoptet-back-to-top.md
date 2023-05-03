@@ -2,12 +2,12 @@
 title: "[6] Shoptet úpravy - Tlačítko nahoru"
 excerpt: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 publishDate: "2023-03-04T11:39:36.050Z"
-image: "/src/assets/blog/thumb-sh-6.png"
+image: "https://github.com/janheder/janheder.cz/blob/main/src/assets/blog/thumb-sh-6.png?raw=true"
 author: "Jan Heder"
 layout: "@layouts/BlogLayout.astro"
 ---
 
-Následující css vložte do hlavičky vašeho eshopu
+Následující css vložte do hlavičky vašeho eshopu (popřípadě externího css souboru)
 
 ```css
 #backToTop {
@@ -43,6 +43,8 @@ Následující css vložte do hlavičky vašeho eshopu
     }
 }
 ```
+
+Následující js vložte do patičky vašeho eshopu (popřípadě externího js souboru)
 
 ```javascript
     $(document).ready(function() {

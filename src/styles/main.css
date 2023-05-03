@@ -111,3 +111,7 @@
 @media screen and (max-width: 991px){
 
 }
+
+.astro-code{
+  background-color: #20303e !important;
+}
