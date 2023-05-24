@@ -7,6 +7,10 @@ author: "Jan Heder"
 layout: "@layouts/BlogLayout.astro"
 ---
 
+> V této sérii článků sdílím užitečné tipy, návody a zkušenosti, jak lze rychle a jednoduše vylepšit váš eshop. 
+
+Celé roky mě irituje, jakým způsobem se na všech výchozích šablonách shoptetu při animaci vysouvání mobilního menu deformují jednotlivé položky. Tady je jednoduchý fix.
+
 Následující css vložte do hlavičky vašeho eshopu
 
 ```css

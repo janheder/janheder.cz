@@ -9,6 +9,9 @@ layout: "@layouts/BlogLayout.astro"
 
 > V této sérii článků sdílím užitečné tipy, návody a zkušenosti, jak lze rychle a jednoduše vylepšit váš eshop. 
 
+Do navigace košíku přidá poslední bod "Dokončení objednávky"
+
+Následující js vložte do patičky vašeho eshopu (popřípadě externího js souboru)
 
 ```js
 if ($(".ordering-process").length){

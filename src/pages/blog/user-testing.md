@@ -9,7 +9,7 @@ layout: "@layouts/BlogLayout.astro"
 
 Uživatelské testování je nezbytnou součástí tvorby úspěšných webových stránek elektronického obchodu. Zahrnuje shromažďování zpětné vazby od zákazníků, kteří používají vaše webové stránky, s cílem identifikovat problémy a zlepšit uživatelskou zkušenost. Prováděním uživatelského testování se můžete ujistit, že vaše webové stránky jsou uživatelsky přívětivé, snadno se na nich orientuje a splňují potřeby a očekávání vašich zákazníků.
 
-Pokud jde o elektronické obchodování, je uživatelské testování obzvláště důležité. Nakupování online může být pro zákazníky frustrujícím zážitkem, a pokud se vaše webové stránky špatně používají, zákazníci pravděpodobně opustí nákupní košík a poohlédnou se jinde. Proto je zásadní klást zákazníkům během uživatelského testování správné otázky. Zde je několik otázek, které byste měli zákazníkům při nakupování na vašich webových stránkách elektronického obchodu položit:
+Pokud jde o elektronické obchodování, je uživatelské testování obzvláště důležité. Nakupování online může být pro zákazníky frustrujícím zážitkem, a pokud se vaše webové stránky špatně používají, zákazníci pravděpodobně opustí nákupní košík a poohlédnou se jinde. Proto je zásadní klást zákazníkům během uživatelského testování ty správné otázky. Tady je několik otázek, které byste měli zákazníkům při nakupování na vašem e-shopu položit:
 
 #### Co vás dnes přivedlo na naše webové stránky?
 
