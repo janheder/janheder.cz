@@ -20,6 +20,9 @@ import pethome2 from "../assets/pethome2.png";
 import ozeo1 from "../assets/ozeo1.png";
 import ozeo2 from "../assets/ozeo2.png";
 
+import tavisa1 from "../assets/tavisa1.png";
+import tavisa2 from "../assets/tavisa2.png";
+
 import starlight from "../assets/starlight-theme.png";
 ---
 <style>
@@ -61,6 +64,9 @@ import starlight from "../assets/starlight-theme.png";
 .reference-item.--ozeo{
     background: #333;
 }
+.reference-item.--tavisa{
+    background: #6257A9;
+}
 .reference-item a{
     padding: 50px;
     display: flex;
@@ -77,7 +83,6 @@ import starlight from "../assets/starlight-theme.png";
     width: 6px;
     height: 6px;
     background: rgba(255, 255, 255, 0.2);
-
 }
 .reference-item-heading{
     display: flex;
@@ -179,7 +184,7 @@ import starlight from "../assets/starlight-theme.png";
                     </div>
                     <div class="reference-item-heading">
                         <h3>Redesign e-shopu výrobce designového nábytku pro děti.</h3>
-                        <span>Chci si o tom přečíst <img src={arrow} alt="Jan Heder"></span>
+                        <span>Chci si o tom přečíst <img src={arrow} alt="arrow"></span>
                     </div>
                     <div class="reference-item-img">
                         <figure>
@@ -192,22 +197,23 @@ import starlight from "../assets/starlight-theme.png";
                 </a>
             </article>
 
-            <article class="reference-item --vino">
-                <a href="/vinoprikryl">
+            <article class="reference-item --tavisa">
+                <a href="/tavisa">
                     <div class="reference-item-tags">
                         <span>UI & UX design</span>
+                        <i></i>
                         <span>Shoptet</span>
                     </div>
                     <div class="reference-item-heading">
-                        <h3>Tvorba a design e-shopu s vínem.</h3>
-                        <span>Chci si o tom přečíst</span>
+                        <h3>Vytvoření e-shopu s ručně háčkovanými produkty</h3>
+                        <span>Chci si o tom přečíst <img src={arrow} alt="arrow"></span>
                     </div>
                     <div class="reference-item-img">
                         <figure>
-                            <Picture src={vino1} alt="Tvorba a design e-shopu." widths={[400, 500, 580]} sizes="(max-width: 991px) 100vw, 580px" class="h-full object-cover transition  group-hover:-translate-y-1 group-hover:shadow-xl" />
+                            <Picture src={tavisa1} alt="Tvorba a design e-shopu." widths={[400, 500, 580]} sizes="(max-width: 991px) 100vw, 580px" class="h-full object-cover transition  group-hover:-translate-y-1 group-hover:shadow-xl" />
                         </figure>
                         <figure>
-                            <Picture src={vino2} alt="Tvorba a design e-shopu." widths={[400, 500, 580]} sizes="(max-width: 991px) 100vw, 580px" class="h-full object-cover transition  group-hover:-translate-y-1 group-hover:shadow-xl" />
+                            <Picture src={tavisa2} alt="Tvorba a design e-shopu." widths={[400, 500, 580]} sizes="(max-width: 991px) 100vw, 580px" class="h-full object-cover transition  group-hover:-translate-y-1 group-hover:shadow-xl" />
                         </figure>
                     </div>
                 </a>
@@ -217,11 +223,12 @@ import starlight from "../assets/starlight-theme.png";
                 <a href="/pethome">
                     <div class="reference-item-tags">
                         <span>UI & UX design</span>
+                        <i></i>
                         <span>Prestashop</span>
                     </div>
                     <div class="reference-item-heading">
                         <h3>Redesign e-shopu prodejce krmiv a chovatelských potřeb pro domácí zvířat.</h3>
-                        <span>Chci si o tom přečíst</span>
+                        <span>Chci si o tom přečíst <img src={arrow} alt="arrow"></span>
                     </div>
                     <div class="reference-item-img">
                         <figure>
@@ -234,15 +241,38 @@ import starlight from "../assets/starlight-theme.png";
                 </a>
             </article>     
 
+            <article class="reference-item --vino">
+                <a href="/vinoprikryl">
+                    <div class="reference-item-tags">
+                        <span>UI & UX design</span>
+                        <i></i>
+                        <span>Shoptet</span>
+                    </div>
+                    <div class="reference-item-heading">
+                        <h3>Tvorba a design e-shopu s vínem.</h3>
+                        <span>Chci si o tom přečíst <img src={arrow} alt="arrow"></span>
+                    </div>
+                    <div class="reference-item-img">
+                        <figure>
+                            <Picture src={vino1} alt="Tvorba a design e-shopu." widths={[400, 500, 580]} sizes="(max-width: 991px) 100vw, 580px" class="h-full object-cover transition  group-hover:-translate-y-1 group-hover:shadow-xl" />
+                        </figure>
+                        <figure>
+                            <Picture src={vino2} alt="Tvorba a design e-shopu." widths={[400, 500, 580]} sizes="(max-width: 991px) 100vw, 580px" class="h-full object-cover transition  group-hover:-translate-y-1 group-hover:shadow-xl" />
+                        </figure>
+                    </div>
+                </a>
+            </article>
+
             <article class="reference-item --ozeo">
                 <a href="/ozeo">
                     <div class="reference-item-tags">
                         <span>UI & UX design</span>
-                        <span>Vlastní řešení</span>
+                        <i></i>
+                        <span>Custom cms</span>
                     </div>
                     <div class="reference-item-heading">
                         <h3>Tvorba nového e-shopu pro prodejce moderního nábytku a bytových doplňků.</h3>
-                        <span>Chci si o tom přečíst</span>
+                        <span>Chci si o tom přečíst <img src={arrow} alt="arrow"></span>
                     </div>
                     <div class="reference-item-img">
                         <figure>

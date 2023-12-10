@@ -5,13 +5,13 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-import ozeo from "../assets/ozeo/wireframe.png";
 
 
+import design from "../assets/benlemi/design.png";
 
 ---
 
-<Layout title="Wordpress">
+<Layout title="Redesign e-shopu s designovým nábytkem pro děti">
   <Sectionhead>
     <Fragment slot="title">
 		Redesign e-shopu s designovým nábytkem pro děti
@@ -33,12 +33,12 @@ import ozeo from "../assets/ozeo/wireframe.png";
       </section>
         
 
+
       <section>
         <h2>Úvod</h2>
         <p>Benlemi se stalo významným hráčem na trhu s nábytkem a bytovými doplňky v České republice a její výrobky jsou ceněny pro svůj design a kvalitu.</p>
         <p>Zabývá se výrobou a prodejem nábytku a bytových doplňků, které jsou vyráběny především z přírodních materiálů, jako je dřevo, kůže nebo kov.</p>
-		<p>Rozhodli se modernizovat svůj e-shop, postavený na platformě Shoptet. Cílem bylo zlepšit uživatelskou zkušenost, zvýšit prodeje a zlepšit zpětnou vazbu od zákazníků.</p>
-
+		    <p>Rozhodli se modernizovat svůj e-shop, postavený na platformě Shoptet. Cílem bylo zlepšit uživatelskou zkušenost, zvýšit prodeje a zlepšit zpětnou vazbu od zákazníků.</p>
       </section>
       
 
@@ -47,7 +47,6 @@ import ozeo from "../assets/ozeo/wireframe.png";
         <p>Projekt byl zahájen podrobnou diskusí, jejímž cílem bylo nadefinovat specifické požadavky projektu.</p>
         <p>To zahrnovalo pochopení jejich značky, cílové skupiny, kategorií produktů a požadovaných funkcí.</p>
       </section>
-
 
 
       <section>
@@ -64,7 +63,17 @@ import ozeo from "../assets/ozeo/wireframe.png";
 
       <section>
         <h2>Fáze návrhu</h2>
-
+        <figure>
+          <Picture
+          src={design}
+          format="avif"
+          alt="design"
+          widths={[400, 600, 820]}
+          sizes="(max-width: 991px) 100vw, 820px"
+          class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+          format="avif"/>
+          <figcaption>Proces designu webu</figcaption>
+        </figure>
       </section>
 
 
@@ -77,12 +86,19 @@ import ozeo from "../assets/ozeo/wireframe.png";
       <section>
         <h2>Testování a zajištění kvality</h2>
 
+        <h3>Cloudflare</h3>
+        <p>Na webu nám běží scripty od facebook, google, heureka, smartsupp a hotjar. To je slušné zatížení javascriptem třetích stran (a to se dá optimalizovat jen v omezené míře). Takže jsme nasadili řešení Cloudflare Pro. 
+          Dosáhli jsme zrychlení o 30% (1.5s) na produktovce, máme také mnohem lepší přehled o bezpečnosti, můžeme využívat service workery, cdn a také firewall.</p>
+        
+        <h3>PWA</h3>
+        <p>Troufám si říct, že jsme jako jeden z prvních (možná úplně první) shopů na shoptetu, který funguje jako progressive web app. Použil jsem knihovnu upup.js a upup.sw.js service worker. Web nám tak funguje i offline a je z něj plnohodnotný instalovatelný PWA.</p>
+        
       </section>
     
 
       <section>
         <h2>Výsledky</h2>
-
+        <p>Na web nám začalo chodit výrazně více lidí z mobilu a také na něm dokončovat objednávku, což byl před redesignem problém, protože web byl dost nepřehledný a pomalý.</p>
       </section>
       
 
@@ -90,6 +106,13 @@ import ozeo from "../assets/ozeo/wireframe.png";
         <h2>Závěr</h2>
 
       </section>
+
+      <section>
+        <h2>Redesign 2022</h2>
+        <p>Předělaný vizuální styl, modernizace kódu, promazání legacy fukncí a stylů.</p>
+      </section>
+
+
 
     </article>
   </Container>
