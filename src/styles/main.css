@@ -3,36 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: 'Cerebri Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/CerebriSans-Regular.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Cerebri Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/CerebriSans-Medium.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Cerebri Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/CerebriSans-SemiBold.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Cerebri Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/CerebriSans-Bold.woff2') format('woff2');
-  }
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 }
-
+body{
+  font-family: 'Roboto', sans-serif;
+}
 
 .btn{
   height: 50px;
